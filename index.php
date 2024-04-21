@@ -31,7 +31,7 @@ $result = mysqli_query($link,'SELECT * FROM MatchVS');
             <li class="block-match" style="background: url(adminPhoto/Match/'.$row["Foto_Match"].') 0 0/50% ;">
             <ul>
                 <li>'.$row["Name_Match"].'</li>
-                <!--<li>'.$row["Opis_Match"].'</li>-->
+                <li>'.$row["Opis_Match"].'</li>
                 <li>'.$row["Koef_Team1"].'</li>
                 <li>'.$row["Koef_Team2"].'</li>
                 <li>'.$row["Date_Start"].'</li>
