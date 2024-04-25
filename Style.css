@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    padding: 1rem;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list {
+    background-color: #eee;
+    padding: 1rem;
+  }
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  main {
+  
+  }
+  .sport {
+    border: 1px solid #000000;
+    margin-bottom: 2px;
+    padding: 2px;
+    width: 110px;
+    border-radius: 10px;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+ 
+  .reg {
+    display: flex;
+    align-items: center;
+  }
+  .cta {
+    background-color: transparent;
+    color: #e7e003;
+    border: 2px solid #e7e003;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cta:hover {
+    background-color: #f2f2f2;
+  }
+
+  input[type="search"] {
+    width: 250px;
+    height: 20px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #e7e003;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 200px;
+  }
