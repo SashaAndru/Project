@@ -21,6 +21,33 @@ const searchInput = document.getElementById('searchInput');
 
 
 //form
+
+const showFormButton = document.getElementById('showFormButton');
+const hideFormButton = document.getElementById('hideFormButton');
+const formContainer = document.getElementById('formContainer');
+
+showFormButton.addEventListener('click', () => {
+  formContainer.classList.remove('hidden');
+});
+
+hideFormButton.addEventListener('click', () => {
+  formContainer.classList.add('hidden');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 document.getElementById('showFormButton').addEventListener('click', function() {
   const formContainer = document.createElement('div');
   formContainer.innerHTML = `
@@ -69,4 +96,4 @@ document.getElementById('hideFormButton').addEventListener('click', function() {
   document.getElementById('formContainer').remove();
   document.getElementById('showFormButton').classList.remove('hidden');
   document.getElementById('hideFormButton').classList.add('hidden');
-});
+});*/
