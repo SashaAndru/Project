@@ -76,6 +76,25 @@ body {
   }
 
   
+
+
+
+  .form-half {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  .right {
+    float: right;
+  }
+  
+  
+ 
+  
+  
   .hidden {
     display: none;
   }
