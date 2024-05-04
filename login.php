@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <?php include("db_connect.php");?>
 </head>
@@ -114,6 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(password_verify($password, $db_password)){
                 session_start();
                 $_SESSION["username"] = $row["Name"];
+                $_SESSION["email"] = $row["Email"];
                 header("Location: mainPage.php");
             }
             else{echo"password incorrect";}    

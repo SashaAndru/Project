@@ -82,3 +82,62 @@
     cursor: pointer; /* Задаем курсор указывающий на кнопку */
     margin-top: 10px;
 }
+
+
+/* account */
+#mainDivAccount {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#mainDivAccount div {
+    margin-bottom: 10px;
+}
+
+.showInput {
+    padding: 5px 10px;
+    background-color: #007bff; /* тут поменять цвет */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.inputContainer {
+    display: none;
+    margin-top: 5px;
+}
+
+.textInput {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#backToMainButton {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#backToMainButton:hover {
+    background-color: #c82333;
+}
+
+.saveButtonAccount{
+    padding: 5px 10px;
+    background-color: #1df501; /* тут поменять цвет */
+    margin-top: 3px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

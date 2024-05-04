@@ -16,9 +16,18 @@
                 <form action="login.php" method="post"> <input type="submit" name="registration" value="Registration"> </form>
             <?php }
             else if(!empty($_SESSION["username"])){
-                ?> <form action="login.php" method="post"> <input type="submit" name="logout" value="Log out"> </form> <?php
+                ?> 
+                <button onclick="openAccount()">Account</button>
+                <form action="login.php" method="post"> <input type="submit" name="logout" value="Log out"> </form> <?php
              } ?>
     </div>
     <hr>
+
+    
+    <script>
+    function openAccount(){
+        window.location.href = "account.php";
+    }
+    </script>
 </body>
 </html>
