@@ -34,7 +34,18 @@ hideFormButton.addEventListener('click', () => {
   formContainer.classList.add('hidden');
 });
 
+//Каса
+const tab2 = document.getElementById('tab2');
 
+toggleTabBtn.addEventListener('click', () => {
+  tab2.classList.toggle('hidden');
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.matches('hideFormButton')) {
+    tab2.classList.remove('hidden');
+  }
+});
 
 
 
