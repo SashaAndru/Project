@@ -4,7 +4,7 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title> 
-    <?php include("include/db_connect.php");?> 
+    <?php include("../include/db_connect.php");?> 
 </head> 
 <body> 
 <div id="registrationFormDiv"> 
@@ -43,8 +43,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $password = password_hash($_POST["password0"], PASSWORD_DEFAULT); 
             $addUserSql="INSERT INTO users (Name, Email, Password) 
                          VALUES ('$name','$email','$password')"; 
-            mysqli_query($conn, $addUserSql); 
-            mysqli_close($conn); 
+            mysqli_query($link, $addUserSql); 
+            mysqli_close($link); 
             ?>  
             <p style="color: green;">Реєстрація успішна!</p> 
             <form action="<?php $_SERVER["PHP_SELF"]?>" method="post"> 
@@ -56,6 +56,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "<p style='color: red;'>".$validationErrors."</p>";} 
     } 
 }  
+
+//ok button
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  if(isset($_POST["ok"])){
+      header("Location: mainPage.php");
+  }
+}
+
+//check is form validate
 function validateForm() { 
     $name = $_POST["name"]; 
     $email = $_POST["email"]; 
@@ -63,7 +72,7 @@ function validateForm() {
     $password1 = $_POST["password1"]; 
     $errors = [];   
    
-    if (empty($name)  empty(($email)  empty($password0) || empty($password1))) { 
+    if (empty($name) || empty(($email) || empty($password0) || empty($password1))) { 
       $errors[] = "Заповніть всі поля!"; 
     } 
     if (empty($password0) || empty($password1)) { 

@@ -39,9 +39,9 @@ function openRegistration() {
   window.location.href = "log/register.php";
 }
 //вхід
-document.getElementById("login").addEventListener("click", function() {
-  window.location.href = "log/login.php";
-});
+function openLogin(){
+  window.location.hreh = "log/login.php"
+}
 
 const showRegisterButton = document.getElementById('regis');
 const hideRegisterButton = document.getElementById('closeRegister');
