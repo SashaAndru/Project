@@ -34,6 +34,27 @@ hideFormButton.addEventListener('click', () => {
   formContainer.classList.add('hidden');
 });
 
+//Реєстрація
+function openRegistration() {
+  window.location.href = "log/register.php";
+}
+//вхід
+document.getElementById("login").addEventListener("click", function() {
+  window.location.href = "log/login.php";
+});
+
+const showRegisterButton = document.getElementById('regis');
+const hideRegisterButton = document.getElementById('closeRegister');
+const formRegisterContainer = document.getElementById('register');
+
+showRegisterButton.addEventListener('click', () => {
+  formRegisterContainer.classList.remove('regi');
+});
+
+hideRegisterButton.addEventListener('click', () => {
+  formRegisterContainer.classList.add('regi');
+});
+
 //Каса
 const tab2 = document.getElementById('tab2');
 

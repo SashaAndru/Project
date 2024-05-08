@@ -27,9 +27,7 @@ body {
     text-decoration: none;
     margin-right: 1rem;
   }
-  main {
-  
-  }
+ 
   .sport {
     border: 1px solid #000000;
     margin-bottom: 2px;
@@ -117,7 +115,7 @@ body {
     position: 10px;
   }
 
-  .hidden {
+  .hidden, .regi {
     display: none;
   }
 
@@ -136,7 +134,7 @@ body {
     width: 50%;
   }
   
-  #formContainer {
+  #formContainer, .register {
     position: fixed;
     top: 0;
     left: 0;
@@ -167,6 +165,21 @@ body {
     max-width: 600px;
     box-sizing: border-box;
   }
+
+  #register form {
+    background-color: #333;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+
   #formContainer1 form {
     background-color: #333;
     position: absolute;
@@ -179,7 +192,7 @@ body {
     max-width: 600px;
     box-sizing: border-box;
   }
-  #hideFormButton{
+  #hideFormButton, .closeRegister{
     background-color: #333;
     border-radius: 10px;
     border: 1px solid #e7e003 ;
@@ -223,4 +236,12 @@ body {
   
   .tab:first-child {
     display: block;
+  }
+
+
+  .block-match{
+    padding: 10px;
+    margin: 50px;
+    border: 1px solid #ddd;
+    color: #f2f2f2;
   }
