@@ -22,7 +22,11 @@ include("include/db_connect.php");
         <button class="cta">Coupons</button>
         <button class="cta">Deposit</button>
         <button id="regis" onclick="openRegistration()" class="cta">Register</button>
+<!-- <<<<<<< HEAD -->
         <button id="login" onclick="openLogin()"class="cta">Log In</button>
+<!-- ======= -->
+        <button id="login" onclick="openLogin()" class="cta">Log In</button>
+<!-- >>>>>>> 51c01bd000462e7132399d31e0ef956d3bab4d2d -->
         
     </nav>
     </header>
