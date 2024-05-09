@@ -1,143 +1,247 @@
-.loginPanel{
-    position: absolute;
-    top:10px;
-    right:10px;
-}
-
-/* registration */
-#registrationFormDiv {
-    width: 300px; /* Ширина формы */
-    margin: 0 auto; /* Центрирование формы по горизонтали */
-    padding: 20px; /* Отступы вокруг формы */
-    border: 1px solid #ccc; /* Граница формы */
-    border-radius: 5px; /* Закругленные углы */
-}
-
-#registrationForm label {
-    display: block; /* Размещаем метки на новой строке */
-    margin-bottom: 5px; /* Отступ между метками */
-}
-
-#registrationForm input[type="text"],
-#registrationForm input[type="email"],
-#registrationForm input[type="password"] {
-    width: 95%; /* Растягиваем поля ввода на всю ширину формы */
-    margin-bottom: 10px; /* Отступ между полями ввода */
-    padding: 8px; /* Поля ввода */
-    border: 1px solid #ccc; /* Граница полей ввода */
-    border-radius: 3px; /* Закругленные углы полей ввода */
-}
-
-#registrationForm input[type="checkbox"] {
-    margin-right: 5px; /* Отступ между чекбоксом и текстом */
-}
-
-#registrationForm input[type="submit"] {
-    width: 100%; /* Растягиваем кнопку на всю ширину формы */
-    padding: 10px; /* Поля кнопки */
-    background-color: #4CAF50; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Убираем границу кнопки */
-    border-radius: 3px; /* Закругленные углы кнопки */
-    cursor: pointer; /* Задаем курсор указывающий на кнопку */
-}
-
-#errorMessage {
-    margin-top: 10px; /* Отступ сверху от сообщения об ошибке */
-    color: red; /* Цвет текста ошибки */
-}
-
-
-/* login */
-#loginForm {
-    width: 300px; /* Ширина формы */
-    margin: 0 auto; /* Центрирование формы по горизонтали */
-    padding: 20px; /* Отступы вокруг формы */
-    border: 1px solid #ccc; /* Граница формы */
-    border-radius: 5px; /* Закругленные углы */
-}
-
-#loginForm label {
-    display: block; /* Размещаем метки на новой строке */
-    margin-bottom: 5px; /* Отступ между метками */
-}
-
-#loginForm input[type="text"],
-#loginForm input[type="email"],
-#loginForm input[type="password"] {
-    width: 95%; /* Растягиваем поля ввода на всю ширину формы */
-    margin-bottom: 10px; /* Отступ между полями ввода */
-    padding: 8px; /* Поля ввода */
-    border: 1px solid #ccc; /* Граница полей ввода */
-    border-radius: 3px; /* Закругленные углы полей ввода */
-}
-
-#loginForm input[type="submit"] {
-    width: 100%; /* Растягиваем кнопку на всю ширину формы */
-    padding: 10px; /* Поля кнопки */
-    background-color: #4CAF50; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Убираем границу кнопки */
-    border-radius: 3px; /* Закругленные углы кнопки */
-    cursor: pointer; /* Задаем курсор указывающий на кнопку */
-    margin-top: 10px;
-}
-
-
-/* account */
-#mainDivAccount {
-    width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+body {
     font-family: Arial, sans-serif;
-}
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    padding: 1rem;
 
-#mainDivAccount div {
-    margin-bottom: 10px;
-}
-
-.showInput {
-    padding: 5px 10px;
-    background-color: #007bff; /* тут поменять цвет */
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.inputContainer {
-    display: none;
-    margin-top: 5px;
-}
-
-.textInput {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-#backToMainButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list {
+    padding: 1rem;
+  }
+  .button-turn{
+    background-color: #333;
+    border-radius: 10px;
+    color: #e7e003;
+    border: 1px solid #e7e003;
+    height: 25px;
+    width: 80px;
+  }
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+ 
+  .sport {
+    border: 1px solid #000000;
+    margin-bottom: 2px;
+    padding: 2px;
+    width: 110px;
+    border-radius: 10px;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+ 
+  .reg {
+    display: flex;
+    align-items: center;
+  }
+  .cta {
+    background-color: transparent;
+    color: #e7e003;
+    border: 2px solid #e7e003;
     padding: 10px 20px;
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
+    font-size: 16px;
+    margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .cta:hover {
+    background-color: #f2f2f2;
+  }
+
+  input[type="search"] {
+    width: 250px;
+    height: 20px;
+    padding: 8px;
     font-size: 16px;
-}
+    border: 1px solid #e7e003;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 200px;
+  }
 
-#backToMainButton:hover {
-    background-color: #c82333;
-}
+  .ad {
+    float: left;
+    width: 200px;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
 
-.saveButtonAccount{
-    padding: 5px 10px;
-    background-color: #1df501; /* тут поменять цвет */
-    margin-top: 3px;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
+  
+
+  .for, .adc, .y{
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .form-half {
+    flex: 1 1 45%;
+ 
+    box-sizing: border-box;
+  }
+  
+  h2{
+    color: #e7e003;
+  }
+  .right, .ad, .test {
+    float: right;
+  }
+  
+  .ad{
+    width: 85%
+  }
+
+  .test{
+    border: 2px solid #000000; 
+    height: auto;
+    width: 100%;
+  }
+  .y {
+    margin: 10px 10px 10px 10;
+    position: 10px;
+  }
+
+  .hidden, .regi {
+    display: none;
+  }
+
+  .right2 {
+    float: right;
+  }
+  .hidden2 {
+    display: none;
+  }
+
+  .form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+  }
+  
+  #formContainer, .register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  #formContainer1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  #formContainer form {
+    background-color: #333;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+  #register form {
+    background-color: #333;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+
+  #formContainer1 form {
+    background-color: #333;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  #hideFormButton, .closeRegister{
+    background-color: #333;
+    border-radius: 10px;
+    border: 1px solid #e7e003 ;
+    color: #e7e003;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .button-group {
+    margin: 10px 0;
+    width: 200px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .button-group button {
+    margin: 10px;
+    border-radius: 10px;
+  }
+ 
+  .submit-button-right{
+    margin:0px 0px 0px 80px;
+  }
+  .submit-button-right1{
+    border-radius: 10px;
+    border: 1px solid #e7e003 ;
+    color: #e7e003;
+    background-color: #333;
+  }
+  .col{
+    border: 1px solid #e7e003 ;
+    color: #e7e003;
+    background-color: #333;
+  }
+
+
+  .tab {
+    display: none;
+  }
+  
+  .tab:first-child {
+    display: block;
+  }
+
+
+  .block-match{
+    padding: 10px;
+    margin: 50px;
+    border: 1px solid #ddd;
+    color: #f2f2f2;
+  }
