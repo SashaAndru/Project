@@ -42,7 +42,22 @@ function openRegistration() {
 function openLogin(){
   window.location.href = "log/login.php"
 }
-
+//вихiд
+function logOut(){
+  var xhr = new XMLHttpRequest();
+    xhr.open("POST", "log/mainFunctions.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log("Logout successful");
+        }
+    };
+    xhr.send("logout=true"); 
+}
+//Аккаунт
+function openAccount(){
+  window.location.href = "log/account.php"
+}
 const showRegisterButton = document.getElementById('regis');
 const hideRegisterButton = document.getElementById('closeRegister');
 const formRegisterContainer = document.getElementById('register');

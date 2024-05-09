@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="log/style.css">
-    <link rel="stylesheet" type="text/css" href="Style/Login.css">
     <?php include("../include/db_connect.php");?> 
     <?php session_start();?>
 </head>
 <body>
     <div id="loginForm">
         <form action="<?php $_SERVER["PHP_SELF"]?>" method="post">
-            <label id="Txt">E-mail:</label> <br>
-            <input class="inp" type="email" name="email" placeholder="ВведітьСвою пошту"> <br>
-            <label id="Txt">Password:</label> <br>
-            <input class="inp" type="password" name="password" placeholder="Введіть свій пароль"> <br>
-            <input class="inp" type="submit" name="loginF" value="Увійти">
+            <label>E-mail:</label> <br>
+            <input type="email" name="email"> <br>
+            <label>Password:</label> <br>
+            <input type="password" name="password"> <br>
+            <input type="submit" name="loginF" value="Увійти">
         </form>
     </div>
 </body>
@@ -36,9 +35,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $db_password = $row["Password"];
             if(password_verify($password, $db_password)){
                 session_start();
-                $_SESSION["username"] = $row["Name"];
+                $_SESSION["id"] = $row["id_User"];
+                $_SESSION["name"] = $row["Name"];
                 $_SESSION["email"] = $row["Email"];
-                header("Location: mainPage.php");
+                header("Location: ../index.php");
             }
             else{echo"password incorrect";}    
         }

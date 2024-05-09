@@ -6,12 +6,12 @@
     <title>Account</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <?php session_start();?>
-    <?php include("db_connect.php");?>
+    <?php include("../include/db_connect.php");?> 
     <?php //Зчитування з БД
         $allInfoSql = "SELECT Name, Surname, Father, DateOfBirth, Tel, Country, City, Oblast, FullAddres, LVL, Points, Limitation, Reg_date
         FROM Users
         WHERE Email = ?";
-        $stmt = $conn->prepare($allInfoSql);
+        $stmt = $link->prepare($allInfoSql);
         $stmt->bind_param("s", $_SESSION['email']);
         $stmt->execute();
         $stmt->bind_result($Name, $Surname, $Father, $DateOfBirth, $Tel, $Country, $City, $Oblast, $FullAddres, $LVL, $Points, $Limitation, $Reg_date);

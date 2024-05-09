@@ -1,5 +1,6 @@
 <?php
 include("include/db_connect.php");
+session_start();
 ?>
 
 
@@ -21,13 +22,14 @@ include("include/db_connect.php");
         <button id="showFormButton">Show Form</button>
         <button class="cta">Coupons</button>
         <button class="cta">Deposit</button>
-        <button id="regis" onclick="openRegistration()" class="cta">Register</button>
-<!-- <<<<<<< HEAD -->
-        <button id="login" onclick="openLogin()"class="cta">Log In</button>
-<!-- ======= -->
-        <button id="login" onclick="openLogin()" class="cta">Log In</button>
-<!-- >>>>>>> 51c01bd000462e7132399d31e0ef956d3bab4d2d -->
-        
+        <?php
+          if(empty($_SESSION["id"])){ ?>
+            <button id="regis" onclick="openRegistration()" class="cta">Register</button>
+            <button id="login" onclick="openLogin()"class="cta">Log In</button><?php }
+          if(!empty($_SESSION["id"])){ ?>
+            <button id="regis" onclick="openAccount()" class="cta">Account</button>
+            <button id="login" onclick="logOut()"class="cta">Log Out</button><?php }
+        ?>
     </nav>
     </header>
     <div class="abc">

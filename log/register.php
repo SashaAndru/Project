@@ -15,7 +15,8 @@
         <label id="Txt" >E-mail: </label> <br> 
         <input id="Txt" class="inp" type="email" name="email" placeholder = "Введіть пошту"> <br> 
         <label id="Txt" >Введіть пароль: </label> <br> 
-        <input class="inp" type="password" class="inp" name="password0" placeholder = "Введіть пароль"> <br>  
+        <input class="inp" type="password" class="inp" name="password0" placeholder = "Введіть пароль"> <br> 
+        <p class="password-info">*Пароль повинен містити вiд 8 символів</p> <br>
         <label id="Txt" >Введіть пароль ще раз:</label> <br> 
         <input class="inp" type="password" class="inp" name="password1" placeholder = "Введіть повторно пароль"> <br> 
         <label id="Txt" for="over18"> 
