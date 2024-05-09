@@ -1,0 +1,24 @@
+body{
+    background-color: #333;
+}
+#registrationForm{
+    padding: 100px 40px 500px 40%;
+
+}
+/* текст над полями введення */
+#Txt{
+color: aliceblue;
+}
+/* Поля для введення інформації */
+.inp{
+    border: 2px solid #e7e003;
+    background-color: #333;
+    color: aliceblue;
+    width: 20%;
+    border-radius: 10px;
+}
+
+::placeholder{
+    color: aliceblue;
+    padding: 5px;
+} 

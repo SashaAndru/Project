@@ -17,3 +17,14 @@ include("db_connect.php");
         }
     }
 ?>
+
+<?php //logout function
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(isset($_POST["logout"])){
+            session_start();
+            session_unset();
+            session_destroy();
+            header("Location: mainPage.php");
+    }
+}
+?>

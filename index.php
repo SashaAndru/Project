@@ -22,7 +22,7 @@ include("include/db_connect.php");
         <button class="cta">Coupons</button>
         <button class="cta">Deposit</button>
         <button id="regis" onclick="openRegistration()" class="cta">Register</button>
-        <button id="login"class="cta">Log In</button>
+        <button id="login" onclick="openLogin()"class="cta">Log In</button>
         
     </nav>
     </header>
@@ -80,11 +80,6 @@ include("include/db_connect.php");
      </main>
     </div>
     
-    
-
-  }
-?>
-
 
 <!--form-->
 
@@ -151,13 +146,6 @@ include("include/db_connect.php");
         </div>
       </form>
     </div>
-
-  
-
-
-
-
-
 
 
     <footer>

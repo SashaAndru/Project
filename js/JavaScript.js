@@ -40,7 +40,7 @@ function openRegistration() {
 }
 //вхід
 function openLogin(){
-  window.location.hreh = "log/login.php"
+  window.location.href = "log/login.php"
 }
 
 const showRegisterButton = document.getElementById('regis');

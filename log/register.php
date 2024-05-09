@@ -4,28 +4,29 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title> 
+    <link rel="stylesheet" type="text/css" href="Style/Register.css">
     <?php include("../include/db_connect.php");?> 
 </head> 
 <body> 
 <div id="registrationFormDiv"> 
     <form id="registrationForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post"> 
-        <label>Ім'я: </label> <br> 
-        <input type="text" name="name"> <br> 
-        <label>E-mail: </label> <br> 
-        <input type="email" name="email"> <br> 
-        <label>Введіть пароль: </label> <br> 
-        <input type="password" name="password0"> <br>  
-        <label>Введіть пароль ще раз:</label> <br> 
-        <input type="password" name="password1"> <br> 
-        <label for="over18"> 
-            <input type="checkbox" name="over18"> 
+        <label id="Txt" >Ім'я: </label> <br> 
+        <input class="inp" class="inp" type="text" name="name" placeholder = "Введіть ім'я"> <br> 
+        <label id="Txt" >E-mail: </label> <br> 
+        <input id="Txt" class="inp" type="email" name="email" placeholder = "Введіть пошту"> <br> 
+        <label id="Txt" >Введіть пароль: </label> <br> 
+        <input class="inp" type="password" class="inp" name="password0" placeholder = "Введіть пароль"> <br>  
+        <label id="Txt" >Введіть пароль ще раз:</label> <br> 
+        <input class="inp" type="password" class="inp" name="password1" placeholder = "Введіть повторно пароль"> <br> 
+        <label id="Txt" for="over18"> 
+            <input  type="checkbox" name="over18"> 
             Мені більше 18 років 
         </label><br> 
-        <label for="rulesAgree"> 
-            <input type="checkbox" name="rulesAgree"> 
+        <label id="Txt" for="rulesAgree"> 
+            <input  type="checkbox" name="rulesAgree"> 
             Я згоден на обробку своїх персональних данних, та з правилами сайту 
         </label><br> 
-        <input type="submit" name="registrationF" value="Зареєструватися"> 
+        <input class="inp" type="submit" name="registrationF" value="Зареєструватися">
         <div id="errorMessage"></div> 
     </form> 
 </div> 
