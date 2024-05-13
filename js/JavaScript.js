@@ -70,24 +70,23 @@ hideRegisterButton.addEventListener('click', () => {
   formRegisterContainer.classList.add('regi');
 });
 
-//Каса
-const tab2 = document.getElementById('tab2');
 
-toggleTabBtn.addEventListener('click', () => {
-  tab2.classList.toggle('hidden');
+
+
+
+
+
+
+
+
+
+
+const openFormButton = document.getElementById('open-form-button');
+const newForm = document.getElementById('new-form');
+
+openFormButton.addEventListener('click', () => {
+  newForm.style.display = 'block';
 });
-
-document.addEventListener('click', (event) => {
-  if (!event.target.matches('hideFormButton')) {
-    tab2.classList.remove('hidden');
-  }
-});
-
-
-
-
-
-
 
 
 

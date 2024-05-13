@@ -100,7 +100,7 @@ session_start();
         </div>  
         </div>
         <div class="button-group">
-        <button class="col" id = "cash-register">Kaca</button>
+        <button id="showFormButton1" class="col" id = "cash-register">Kaca</button>
         <button class="col">Баланс</button>
         <button class="col">Мої дані</button>
         <button class="col">Бонуси</button>
@@ -119,10 +119,10 @@ session_start();
 
 
     <!--form каса-->
-    <div id="formContainer1" class="hidden">
+    <div id="formContainer1" class="hidden1">
       <form class="p">
         <div>
-            <button id="hideFormButton">Закрити</button>
+            <button id="hideFormButton1">Закрити</button>
             <div class="for">
                 <h2>Мій баланс: 100 UAH</h2>
                 <div class="submit-button-right">
@@ -132,7 +132,7 @@ session_start();
             </div>  
          <div class="button-group">
            <button id = "cash-register" class="col">Kaca</button>
-           <button class="col">Баланс</button>
+           <button id="showFormButton1" class="col">Баланс</button>
            <button class="col">Мої дані</button>
            <button class="col">Бонуси</button>
            <button class="col">Мої бонуси казино: 2</button>
@@ -152,6 +152,25 @@ session_start();
         </div>
       </form>
     </div>
+
+
+
+
+
+
+    <form id="my-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <button id="open-form-button">Open New Form</button>
+</form>
+
+<div id="new-form" style="display:none;">
+  <form id="new-form">
+    <label for="new-name">New Name:</label>
+    <input type="text" id="new-name" name="new-name">
+    <button type="submit">Submit</button>
+  </form>
+</div> 
 
 
     <footer>

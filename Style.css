@@ -122,7 +122,7 @@ body {
   .right2 {
     float: right;
   }
-  .hidden2 {
+  .hidden1 {
     display: none;
   }
 
@@ -165,6 +165,19 @@ body {
     max-width: 600px;
     box-sizing: border-box;
   }
+  #formContainer1 form {
+    background-color: #333;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
 
   #register form {
     background-color: #333;
@@ -244,4 +257,66 @@ body {
     margin: 50px;
     border: 1px solid #ddd;
     color: #f2f2f2;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #my-form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  #my-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #my-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #new-form {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  #new-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #new-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
