@@ -86,8 +86,71 @@ session_start();
      </main>
     </div>
     
+    
+    <div id="formContainer">
+  <form id="form1" class="hidden" style="display: block">
+  <form id="form2" class="hidden">
+    
+  </form>
 
-<!--form-->
+  <form id="form3" class="hidden">
+    
+  </form>
+  <form id="form4" class="hidden">
+   
+  </form>
+  <form id="form5" class="hidden">
+   
+  </form>
+  <form id="form6" class="hidden">
+    
+  </form>
+  <form id="form7" class="hidden">
+   
+  </form>
+  <form id="form8" class="hidden">
+
+  </form>
+  <form id="form9" class="hidden">
+
+  </form>
+  <form id="form10" class="hidden">
+    
+  </form>
+  <form id="form11" class="hidden">
+  
+  </form>
+  <form id="form12" class="hidden">
+    
+  </form>
+
+  <button id="hideFormButton">Hide Form</button>
+    <h2>Мій баланс: 100 UAH</h2>
+    <div class="button-group">
+      <button class="submit-button-right1" onclick="toggleForms('form1', 'form2')">Відкриті</button>
+      <button class="submit-button-right1" onclick="toggleForms('form1', 'form3')">Розраховані</button>
+    </div>
+  <div class="button-group">
+    <button id="showFormButton1" onclick="toggleForms('form3',)" class="col" id = "cash-register">Kaca</button>
+    <button class="col" onclick="toggleForms('form2')">Баланс</button>
+    <button class="col" onclick="toggleForms('form3')">Мої дані</button>
+    <button class="col" onclick="toggleForms('form4')">Бонуси</button>
+    <button class="col" onclick="toggleForms('form5')">Мої бонуси казино: 2</button>
+    <button class="col" onclick="toggleForms('form6')">Мої спортивні бонуси: 3</button>
+    <button class="col" onclick="toggleForms('form7')">Історія</button>
+    <button class="col" onclick="toggleForms('form8')">Історія транзакцій</button>
+    <button class="col" onclick="toggleForms('form9')">Історія ставок</button>
+    <button class="col" onclick="toggleForms('form10')">Ігрові транзакції</button>
+    <button class="col" onclick="toggleForms('form11')">Верифікація</button>
+    <button class="col" onclick="toggleForms('form12')">Історія бонусів</button>
+  </div>
+  
+  </form>
+
+</div>
+
+
+<!--form
 
     <div id="formContainer" class="hidden">
       <form>
@@ -100,7 +163,7 @@ session_start();
         </div>  
         </div>
         <div class="button-group">
-        <button id="showFormButton1" class="col" id = "cash-register">Kaca</button>
+        <button id="showFormButton1" onclick="toggleForms()" class="col" id = "cash-register">Kaca</button>
         <button class="col">Баланс</button>
         <button class="col">Мої дані</button>
         <button class="col">Бонуси</button>
@@ -118,7 +181,7 @@ session_start();
     </div>
 
 
-    <!--form каса-->
+   
     <div id="formContainer1" class="hidden1">
       <form class="p">
         <div>
@@ -131,7 +194,7 @@ session_start();
                 </div>
             </div>  
          <div class="button-group">
-           <button id = "cash-register" class="col">Kaca</button>
+           <button id = "cash-register" onclick="toggleForms()" class="col">Kaca</button>
            <button id="showFormButton1" class="col">Баланс</button>
            <button class="col">Мої дані</button>
            <button class="col">Бонуси</button>
@@ -145,33 +208,9 @@ session_start();
            <button class="col">Історія бонусів</button>
          </div>
         </div>
-
-        <div id="tab2" class="tab">
-          <h2>Tab 2</h2>
-          <p>Content for Tab 2</p>
-        </div>
       </form>
     </div>
-
-
-
-
-
-
-    <form id="my-form">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <button id="open-form-button">Open New Form</button>
-</form>
-
-<div id="new-form" style="display:none;">
-  <form id="new-form">
-    <label for="new-name">New Name:</label>
-    <input type="text" id="new-name" name="new-name">
-    <button type="submit">Submit</button>
-  </form>
-</div> 
-
+    -->
 
     <footer>
       &copy; 2023 Назва сайту. Всі права захищені.

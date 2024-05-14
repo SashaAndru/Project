@@ -115,6 +115,17 @@ body {
     position: 10px;
   }
 
+
+
+
+  
+
+
+
+
+
+  
+
   .hidden, .regi {
     display: none;
   }
@@ -123,7 +134,7 @@ body {
     float: right;
   }
   .hidden1 {
-    display: none;
+    display: block;
   }
 
   .form {
@@ -176,6 +187,7 @@ body {
     width: 40%;
     max-width: 600px;
     box-sizing: border-box;
+    display: none;
   }
 
 
@@ -240,7 +252,8 @@ body {
     border: 1px solid #e7e003 ;
     color: #e7e003;
     background-color: #333;
-  }
+    border: 10%;
+    }
 
 
   .tab {

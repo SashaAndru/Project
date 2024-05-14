@@ -6,7 +6,7 @@ sports.forEach(sport => {
 });
 
 //пошук
-const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('searchInput');
     const sportsList = document.getElementById('sportsList');
 
     searchInput.addEventListener('input', () => {
@@ -19,8 +19,40 @@ const searchInput = document.getElementById('searchInput');
       });
     });
 
+function toggleForms() {
+    const form1 = document.getElementById("formContainer");
+    const form2 = document.getElementById("formContainer1");
+    
+    form1.addEventListener('click', () => {
+      formContainer.classList.remove('hidden');
+    });
+    form2.addEventListener('click', () => {
+      formContainer.classList.add('hidden1');
+    });
 
+    // if (form1.style.display === "none") {
+    //     form1.style.display = "block";
+    //     form2.style.display = "none";
+    // }else {
+    //     form1.style.display = "none";
+    //     form2.style.display = "block";
+    // }
+     }
 //form
+function toggleForms() {
+  const args = Array.from(arguments);
+  args.forEach(formId => {
+    const form = document.getElementById(formId);
+    if (form.classList.contains('hidden')) {
+      form.classList.remove('hidden');
+    } else {
+      form.classList.add('hidden');
+    }
+  });
+}
+
+
+
 
 const showFormButton = document.getElementById('showFormButton');
 const hideFormButton = document.getElementById('hideFormButton');
