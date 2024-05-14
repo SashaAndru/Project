@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.stavka-na-sport{
+    border: 2px solid #fff;
+    height: 550px;
+    width: 500px;
+    padding: 20px;
+    background: #333;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: #e7e003;
+    font-size: 23px;
+}
+
+label{
+    margin: 10px 0px;
+}
+
+.not-change{
+    background-color: #333;
+    font-size: 20px;
+    color: #e7e003;
+    cursor: auto;
+}
+
+.none{
+    display: none;
+}
+
+.stavka{
+    
+    background: #333;
+    border-bottom: 1px solid #e7e003;
+    color: #e7e003;
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+.btn-stavka{
+    margin: 10px 0px 0px 0px;
+    border: 1px solid #fff;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-stavka:hover{
+    background: #e7e003;
+    color: #333;
+    transition: all 0.5s ease 0s;
+}
+
+.silka-home a{
+    display: flex;
+    justify-content: center;
+    color: #e7e003;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 5px;
+}
+
+.silka-home a:hover{
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.non{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.error_{
+    border-bottom: 2px solid #e9380b;
+}

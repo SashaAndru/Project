@@ -63,4 +63,5 @@ function SaveData(inputId, dbName) {
   } else {
     alert("Заповніть будь ласка поле");
   }
+  location.reload();
 }

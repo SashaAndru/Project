@@ -179,24 +179,27 @@
         <div>
             <label>Дата реєстрації: <?php echo $Reg_date ?></label>
         </div>
-
+        <div>
+            <button id="giveMoneyButton">Поповнити баланс</button>
+            <button id="takeMoneyButton">Зняти кошти</button>
+        </div>
         <div>
             <button onclick="BackToMain()" id="backToMainButton">Повернутися на головну</button>
         </div>
+        
     </div>
 
-    <button id="takeMoneyButton">Зняти кошти</button>
-    <button id="giveMoneyButton">Поповнити баланс</button>
    
     <div id="formTakeMoney" class="hidden">
         <div id="giveMoneyDiv">
             <form id="vivodForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                 <label for="sumaVivoda">Сума зняття:</label><br>
-                <input type="text" id="sumaVivoda" name="sumaVivoda" placeholder="100UAH"><br>
+                <input type="text" id="sumaVivoda" name="sumaVivoda" placeholder="100UAH"><br><br>
                 <label for="cardNumber">Номер карти:</label><br>
                 <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX"><br>
-                <label>*Ваш лiмiт на вивiд: <?php echo "$Limitation"?></label><br>
+                <label>*Ваш лiмiт на вивiд: <?php echo "$Limitation"?></label><br><br>
                 <input type="submit" name="vivod" value="Зняти кошти">
+                <button id="closeGiveMoneyForm">Закрити</button>
             </form>
         </div>
     </div>
@@ -204,8 +207,8 @@
     <div id="formGiveMoney" class="hidden">
         <div id="giveMoneyDiv">
             <form id="donateForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-                <label for="sumaDonate">Введіть суму поповнення:</label><br>
-                <input type="text" id="sumaDonate" name="sumaDonate" placeholder="100UAH">
+                <label for="sumaDonate" style="color: white">Введіть суму поповнення:</label><br>
+                <input type="text" id="sumaDonate" name="sumaDonate" placeholder="100UAH"><br><br>
                 <div class="card">
                     <div class="card-front">
                         <div class="card-number">
@@ -252,6 +255,17 @@
     </script>
 
     <script src="JavaScriptSH.js"></script>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const clickParam = urlParams.get('click');
+
+    if (clickParam === 'true') {
+        const giveMoneyButton = document.getElementById('giveMoneyButton');
+        giveMoneyButton.click();
+    }
+};
+</script>
 </body>
 </html>
 
@@ -276,6 +290,7 @@
                 $stmt->bind_param("s", $Email);
                 $stmt->execute();
                 $stmt->close();
+                $_SESSION['balance'] = $Points + $sum;
                 echo "<script>window.location.href = '../index.php';</script>";
                 exit;
             }
@@ -305,6 +320,7 @@
                                WHERE Email = '$Email'";
                 $link->query($sqlTakeMoney);
                 $link->close();
+                $_SESSION['balance'] = $Points - $sum;
                 echo "<script>window.location.href = '../index.php';</script>";
                 exit;
             }

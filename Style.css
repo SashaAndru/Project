@@ -253,8 +253,7 @@ h2{
   color: #e7e003;
   background-color: #333;
   border: 10%;
-  }
-
+}
 
 .tab {
   display: none;
@@ -264,12 +263,61 @@ h2{
   display: block;
 }
 
-
 .block-match{
   padding: 10px;
   margin: 50px;
   border: 1px solid #ddd;
   color: #f2f2f2;
+}
+
+.block-game{
+  margin: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  height: 170px;
+}
+
+.komand-koef-block{
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.komand-koef-2{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.opis{
+border: 1px solid #fff;
+margin: 0px 20px;
+padding: 10px;
+font-size: 20px;
+}
+
+.data-koef{
+  display: flex;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.komand-koef-1 a{
+  color: #fff;
+}
+
+.komand-koef-1 a:hover{
+  color: #888;
+}
+
+.komand-koef-2 a{
+  color: #fff;
+}
+
+.komand-koef-2 a:hover{
+  color: #888;
 }
 
 
@@ -333,3 +381,10 @@ h2{
   border-radius: 5px;
   cursor: pointer;
 }
+
+.footer{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+

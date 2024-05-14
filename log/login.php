@@ -39,6 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION["name"] = $row["Name"];
                 $_SESSION["email"] = $row["Email"];
                 $_SESSION["balance"] = $row["Points"];
+                $_SESSION["lvl"] = $row["LVL"];
                 header("Location: ../index.php");
             }
             else{echo"password incorrect";}    

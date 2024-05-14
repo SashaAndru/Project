@@ -39,8 +39,7 @@ function toggleForms() {
     // }
      }
 //form
-<<<<<<< HEAD
-=======
+
 function toggleForms() {
   const args = Array.from(arguments);
   args.forEach(formId => {
@@ -54,9 +53,6 @@ function toggleForms() {
 }
 
 
-
-
->>>>>>> 3d9d1fcdee917e48c59599014f97ff758af2a7ff
 const showFormButton = document.getElementById('showFormButton');
 const hideFormButton = document.getElementById('hideFormButton');
 const formContainer = document.getElementById('formContainer');
@@ -90,6 +86,7 @@ function logOut(){
         }
     };
     xhr.send("logout=true"); 
+    location.reload(true);
 }
 
 //Аккаунт
@@ -117,16 +114,6 @@ hideRegisterButton.addEventListener('click', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
 const openFormButton = document.getElementById('open-form-button');
 const newForm = document.getElementById('new-form');
 
@@ -134,66 +121,14 @@ openFormButton.addEventListener('click', () => {
   newForm.style.display = 'block';
 });
 
-<<<<<<< HEAD
+
 document.addEventListener('click', (event) => {
   if (!event.target.matches('hideFormButton')) {
     tab2.classList.remove('hidden');
   }
 });
-=======
->>>>>>> 3d9d1fcdee917e48c59599014f97ff758af2a7ff
 
-
-
-
-
-/*
-document.getElementById('showFormButton').addEventListener('click', function() {
-  const formContainer = document.createElement('div');
-  formContainer.innerHTML = `
-    <form>
-      <!-- Balance section -->
-      <h2>Мій баланс: 100 UAH</h2>
-      <button>Kaca</button>
-
-      <!-- Buttons section -->
-      <div class="button-group">
-        <button>Баланс</button>
-        <button>Мої дані</button>
-      </div>
-
-      <!-- Bonuses section -->
-      <h3>Бонуси</h3>
-      <p>Мої бонуси казино: 2</p>
-      <p>Мої спортивні бонуси: 3</p>
-
-      <!-- History section -->
-      <h3>Історія</h3>
-      <button>Історія транзакцій</button>
-      <button>Історія ставок</button>
-      <button>Ігрові транзакції</button>
-      <button>Верифікація</button>
-      <button>Історія бонусів</button>
-
-      <!-- Status section -->
-      <h3>Статус</h3>
-      <p>Відкриті</p>
-      <p>Розраховані</p>
-
-      <!-- Hide form button -->
-      <button id="hideFormButton">Hide Form</button>
-    </form>
-  `;
-  formContainer.id = 'formContainer';
-  formContainer.classList.remove('hidden');
-  formContainer.style.zIndex = '1000';
-  document.body.appendChild(formContainer);
-  document.getElementById('showFormButton').classList.add('hidden');
-  document.getElementById('hideFormButton').classList.remove('hidden');
-});
-
-document.getElementById('hideFormButton').addEventListener('click', function() {
-  document.getElementById('formContainer').remove();
-  document.getElementById('showFormButton').classList.remove('hidden');
-  document.getElementById('hideFormButton').classList.add('hidden');
-});*/
+//Donate
+function openDonate() {
+  window.location.href = 'log/account.php?click=true';
+}
