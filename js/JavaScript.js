@@ -21,7 +21,6 @@ const searchInput = document.getElementById('searchInput');
 
 
 //form
-
 const showFormButton = document.getElementById('showFormButton');
 const hideFormButton = document.getElementById('hideFormButton');
 const formContainer = document.getElementById('formContainer');
@@ -38,10 +37,12 @@ hideFormButton.addEventListener('click', () => {
 function openRegistration() {
   window.location.href = "log/register.php";
 }
+
 //вхід
 function openLogin(){
   window.location.href = "log/login.php"
 }
+
 //вихiд
 function logOut(){
   var xhr = new XMLHttpRequest();
@@ -54,10 +55,19 @@ function logOut(){
     };
     xhr.send("logout=true"); 
 }
+
 //Аккаунт
 function openAccount(){
   window.location.href = "log/account.php"
 }
+
+//До головної
+function BackToMain(){
+  window.location.href="../index.php";
+}
+
+
+
 const showRegisterButton = document.getElementById('regis');
 const hideRegisterButton = document.getElementById('closeRegister');
 const formRegisterContainer = document.getElementById('register');
@@ -82,13 +92,6 @@ document.addEventListener('click', (event) => {
     tab2.classList.remove('hidden');
   }
 });
-
-
-
-
-
-
-
 
 
 

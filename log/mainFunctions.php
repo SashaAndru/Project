@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include("db_connect.php");
+include("../include/db_connect.php");
 ?>
 
 
@@ -10,7 +10,7 @@ include("db_connect.php");
             $field = $_POST["field"];
             $data = $_POST["data"];
             $addInfoSql = "UPDATE Users SET $field = ? WHERE Email = ?";
-            $stmt = $conn->prepare($addInfoSql);
+            $stmt = $link->prepare($addInfoSql);
             $stmt->bind_param("ss", $data, $_SESSION['email']);
             $stmt->execute();
             $stmt->close();

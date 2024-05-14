@@ -16,6 +16,7 @@ color: aliceblue;
     color: aliceblue;
     width: 20%;
     border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 ::placeholder{

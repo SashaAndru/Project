@@ -29,3 +29,16 @@ color: aliceblue;
     margin-top: -10px;
     margin-bottom: -5px;
 }
+#okButton{
+    width: 150px; 
+    height: 40px; 
+    background-color: #e7e003;
+    color: #333; 
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; 
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}

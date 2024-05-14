@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title> 
     <link rel="stylesheet" type="text/css" href="Style/Register.css">
-    <?php include("../include/db_connect.php");?> 
+    <?php include("../include/db_connect.php");?>
+    <script src="../js/JavaScript.js"></script> 
 </head> 
 <body> 
 <div id="registrationFormDiv"> 
@@ -50,7 +51,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             ?>  
             <p style="color: green;">Реєстрація успішна!</p> 
             <form action="<?php $_SERVER["PHP_SELF"]?>" method="post"> 
-            <input type="submit" name="ok" value="ok"></form> 
+            <script>
+                setTimeout(function(){
+                    window.location.href = "../index.php"; 
+                }, 3000); 
+            </script>
             <?php 
         } 
         else { 
@@ -58,13 +63,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "<p style='color: red;'>".$validationErrors."</p>";} 
     } 
 }  
-
-//ok button
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-  if(isset($_POST["ok"])){
-      header("Location: mainPage.php");
-  }
-}
 
 //check is form validate
 function validateForm() { 
